@@ -26,7 +26,7 @@ class UserServiceTest {
     public void sumIsNotValid() {
 
         final val sum = userService.sum(5, 4);
-        Assertions.assertEquals(10, sum);
+        Assertions.assertNotEquals(10, sum);
     }
 
     @Test
