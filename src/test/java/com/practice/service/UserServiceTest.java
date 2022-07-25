@@ -35,7 +35,7 @@ class UserServiceTest {
         final IllegalArgumentException exc = Assertions.assertThrows(IllegalArgumentException.class, () -> {
             userService.sum(-5, -4);
         });
-        Assertions.assertEquals("Invalid params!", exc.getMessage());
+        Assertions.assertEquals("Invalid parameters!", exc.getMessage());
     }
 
     @Test
