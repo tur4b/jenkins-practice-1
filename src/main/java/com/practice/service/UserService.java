@@ -10,4 +10,8 @@ public class UserService {
         System.out.println("delete");
     }
 
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
 }

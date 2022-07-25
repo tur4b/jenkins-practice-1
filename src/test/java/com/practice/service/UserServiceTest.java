@@ -1,9 +1,10 @@
 package com.practice.service;
 
+import lombok.val;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserServiceTest {
 
@@ -15,8 +16,17 @@ class UserServiceTest {
     }
 
     @Test
-    public void create() {
-        userService.create(1, "test");
+    public void sum() {
+
+        final val sum = userService.sum(5, 4);
+        Assertions.assertEquals(9, sum);
+    }
+
+    @Test
+    public void sumIsNotValid() {
+
+        final val sum = userService.sum(5, 4);
+        Assertions.assertEquals(10, sum);
     }
 
     @Test
