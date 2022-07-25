@@ -14,6 +14,7 @@ public class UserService {
         if(a < 0 && b < 0) {
             throw new IllegalArgumentException("Invalid parameters!");
         }
+
         return a + b;
     }
 
