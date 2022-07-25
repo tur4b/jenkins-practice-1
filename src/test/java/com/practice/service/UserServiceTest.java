@@ -53,7 +53,7 @@ class UserServiceTest {
     @Test
     public void subtractThrowsException() {
         final IllegalArgumentException exc = Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            userService.subtract(5, 3);
+            userService.subtract(3, 5);
         });
         Assertions.assertEquals("Invalid parameters!", exc.getMessage());
     }
