@@ -29,6 +29,15 @@ class UserServiceTest {
         Assertions.assertNotEquals(10, sum);
     }
 
+    @Test()
+    public void sumThrowsException() {
+
+        final IllegalArgumentException exc = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            userService.sum(-5, -4);
+        });
+        Assertions.assertEquals("Invalid params!", exc.getMessage());
+    }
+
     @Test
     public void deleteById() {
         userService.deleteById(1);

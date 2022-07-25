@@ -11,6 +11,9 @@ public class UserService {
     }
 
     public int sum(int a, int b) {
+        if(a < 0 && b < 0) {
+            throw new IllegalArgumentException("Invalid params!");
+        }
         return a + b;
     }
 
