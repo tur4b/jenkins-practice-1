@@ -29,11 +29,31 @@ class UserServiceTest {
         Assertions.assertNotEquals(10, sum);
     }
 
-    @Test()
+    @Test
     public void sumThrowsException() {
 
         final IllegalArgumentException exc = Assertions.assertThrows(IllegalArgumentException.class, () -> {
             userService.sum(-5, -4);
+        });
+        Assertions.assertEquals("Invalid parameters!", exc.getMessage());
+    }
+
+    @Test
+    public void subtract() {
+        final val result = userService.subtract(5, 3);
+        Assertions.assertEquals(2, result);
+    }
+
+    @Test
+    public void subtractIsNotValid() {
+        final val result = userService.subtract(5, 3);
+        Assertions.assertNotEquals(1, result);
+    }
+
+    @Test
+    public void subtractThrowsException() {
+        final IllegalArgumentException exc = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            userService.subtract(5, 3);
         });
         Assertions.assertEquals("Invalid parameters!", exc.getMessage());
     }

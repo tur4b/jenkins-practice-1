@@ -18,4 +18,11 @@ public class UserService {
         return a + b;
     }
 
+    public int subtract(int a, int b) {
+        if(a < b) {
+            throw new IllegalArgumentException("Invalid parameters!");
+        }
+        return a - b;
+    }
+
 }
