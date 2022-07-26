@@ -17,7 +17,6 @@ public class MathOperations {
         for (BigDecimal num : nums) {
             base = base.add(num);
         }
-
         return base;
     }
 
@@ -28,7 +27,6 @@ public class MathOperations {
         for (BigDecimal num : nums) {
             base = base.subtract(num);
         }
-
         return base;
     }
 
@@ -42,7 +40,6 @@ public class MathOperations {
         for (BigDecimal num : nums) {
             base = base.multiply(num);
         }
-
         return base;
     }
 
@@ -59,7 +56,6 @@ public class MathOperations {
             }
             base = base.divide(num, 2, RoundingMode.CEILING);
         }
-
         return base;
     }
 
