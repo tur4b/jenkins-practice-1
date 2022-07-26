@@ -95,7 +95,6 @@ class MathOperationsTest {
         final IllegalArgumentException exc = assertThrows(IllegalArgumentException.class,
                 () -> mathOperations.divide(BigDecimal.TEN)
         );
-
         assertEquals("At least one number must be exist!", exc.getMessage());
     }
 
@@ -104,7 +103,6 @@ class MathOperationsTest {
         final ArithmeticException exc = assertThrows(ArithmeticException.class,
                 () -> mathOperations.divide(BigDecimal.TEN, BigDecimal.ZERO, BigDecimal.ONE)
         );
-
         assertEquals("Can't divide by zero!", exc.getMessage());
     }
 
