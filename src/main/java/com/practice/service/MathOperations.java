@@ -1,12 +1,10 @@
 package com.practice.service;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-@Slf4j
 @Service
 public class MathOperations {
 
